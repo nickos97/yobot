@@ -1,0 +1,67 @@
+Intro
+In this section, you can create schedules that will allow you to display at specific dates and times the Layouts, Media, and Playlists you created. Schedules help with managing the frequency with which content gets displayed.
+
+Creating a Schedule
+To create a new schedule, click the “Add Schedule” button at the bottom of the Schedules list. The next step is to name your new schedule and configure the layouts, media, or playlists you want to display.
+
+The calendar allows you to view the month, week, or even day of your choice by clicking on the relevant buttons. You can see the current date; however, you can move to the previous or next month/week/day by clicking the arrows next to the “Today” button.
+
+On the right side of the screen, there is the “Entries” column under which you can find all of the scheduled media entries you have created within that specific schedule.
+
+As a next step, click on the “+Add Entry” button and use the drop-down menu next to content to choose between a Layout, Media, or Playlist category in the “New Entry” window that appears. Once you pick a content category (i.e., a Layout), a new drop-down menu appears from which you can select the specific Layout, Media, or Playlist you want to use in your schedule.
+
+To set the start date and time you want your layout, media, or playlist displayed, fill in the information in the “Entry Starts” box. To schedule the time, click on the clock icon.
+To set the end date and time for the content you will display, fill in the information in the “Entry Ends” box. To schedule the time, click on the clock icon.
+The next box, “Repeat“, indicates the frequency your layout, media, or playlist will be displayed. Click to choose one of the options provided:
+Once 
+If you want your layout, media, or playlist to playback only during specific hours on a specific day/date.
+Daily
+If you want to set which days of the week you wish your layout, media, or playlist to playback.
+Weekly
+If you want your layout, media, or playlist to be displayed once per week.
+Monthly
+If you want your layout, media, or playlist to be displayed once per month.
+Yearly
+If you want your layout, media, or playlist to be displayed once per year.
+Custom
+Repeat every X days/weeks/months/years
+Ends
+Never: The entry will never expire.
+On: Set the specific date that the entry will expire. In other words, it will stop displaying on the screen
+After: Set the number of occurrences that the entry will expire.
+Finally, “Repeat Until” indicates the time frame you want to set your schedule. You can select a specific date and time or click “Forever” so your schedule will always be displayed as indicated.
+Example 1
+The “Turned Off” option will turn off your screen daily (except Saturdays and Sundays) from 16:45:00 until 08:00:00 the next and repeat until the” End of time”.
+
+Example 2
+In the following example, we have scheduled a layout to appear from 7 a.m. until 8:30 p.m. On top of that, we have added another entry, which will display a Playlist from 9 a.m. until 12 a.m.
+
+With the above configuration:
+
+The layout will play from 7 a.m. to 9 a.m.
+The playlist will play from 9 a.m. to 12 a.m. (because the playlist entry has greater priority over the layout entry)
+The layout will resume playback again at 12 a.m. up until 8:30 p.m.
+
+Example 3
+An option appears in the list of all available/created events in your account, and it is the “Turned Off” option. Setting this in a Schedule results in your monitor automatically turning off.
+
+Take a look here for more information.
+
+Managing Schedules
+In the “Schedules” section, you can see a list of the schedules currently created in your Yodeck account. Schedule information is organized in the following columns:
+
+The name of the schedule
+The timestamp (date and time) of the schedule was modified for the last time
+the Workspace (for accounts in the Enterprise plan) the schedule belongs
+the Actions column
+If you click on the three dots icon in the Actions column, you will be presented with a list of actions you can apply to your schedules.
+
+Change the details of a schedule by clicking the” Edit” button.
+Check out the “Creating a Schedule” section for details on the fields.
+
+Additional Control Settings
+In the top-left corner, you can use the Search box to sort out your schedule listing quickly.
+
+You can search using any of the columns by name, date, workspace, etc.
+You can select one or more schedules by clicking the square box left to their thumbnail.
+You can then click the Actions button at the bottom to Move or Delete all the selected schedules simultaneously.

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot Interface</title>
+    <style>
+        body { font-family: Arial, sans-serif; background: #f4f4f9; padding: 20px; }
+        #chatContainer { background: white; box-shadow: 0 2px 10px rgba(0,0,0,0.1); border-radius: 8px; padding: 20px; width: 300px; margin: auto; }
+        #chatLog { height: 300px; overflow-y: auto; border: 1px solid #ddd; padding: 10px; margin-bottom: 10px; display: flex; flex-direction: column; }
+        #userInputContainer { display: flex; align-items: center; }
+        #userInput { flex: 1; padding: 10px; box-sizing: border-box; }
+        #sendButton { padding: 10px 20px; margin-left: 10px; }
+        .message { margin-bottom: 10px; padding: 10px; border-radius: 8px; max-width: 70%; word-wrap: break-word; }
+        .userMessage { background-color: #e5f1ff; align-self: flex-end; }
+        .botMessage { background-color: #f0f0f0; align-self: flex-start; }
+        #chatTitle { text-align: center; margin-bottom: 10px; font-size: 20px; }
+    </style>
+</head>
+<body>
+    <div id="chatContainer">
+        <div id="chatTitle">Chat Bot</div>
+        <div id="chatLog"></div>
+        <div id="userInputContainer">
+            <input type="text" id="userInput" placeholder="Ask me something..." autocomplete="off">
+            <button id="sendButton" onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+
+    <script>
+        const chatLog = document.getElementById('chatLog');
+        const userInput = document.getElementById('userInput');
+
+        // Initialize chat with chatbot's message
+        displayMessage("Hi, how can I help you?", 'bot');
+
+        function sendMessage() {
+            const message = userInput.value;
+            displayMessage(message, 'user');
+            fetch('/promt', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ question: message })
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log(data)
+                displayMessage(data.answer, 'bot');
+            })
+            .catch(error => console.error('Error:', error));
+            userInput.value = ''; // clear the input after sending
+        }
+
+        function displayMessage(message, sender) {
+            const messageElement = document.createElement('div');
+            messageElement.textContent = message;
+            messageElement.classList.add('message');
+            if (sender === 'user') {
+                messageElement.classList.add('userMessage');
+            } else {
+                messageElement.classList.add('botMessage');
+            }
+            chatLog.appendChild(messageElement);
+            chatLog.scrollTop = chatLog.scrollHeight; // Auto scroll to bottom
+        }
+    </script>
+</body>
+</html>
